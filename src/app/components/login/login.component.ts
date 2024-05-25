@@ -1,6 +1,8 @@
 import { Component, Renderer2, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { OnInit } from '@angular/core';
+import { LoginService } from '../../services/login.service';
+import { userLogin } from '../../models/user';
 
 @Component({
   selector: 'app-login',
@@ -9,13 +11,29 @@ import { OnInit } from '@angular/core';
 })
 export class LoginComponent {
 
-  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {
+  constructor(private loginService:LoginService,private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {
   }
   ngOnInit() {
     this.addLinkElement();
     /*this.loadScript('assets/xato/plugins/apex/apexcharts.min.js');
     this.loadScript('assets/xato/plugins/flatpickr/flatpickr.js');
     this.loadScript('assets/js/dashboard.js');*/
+  }
+
+  login(){
+    let email = (<HTMLInputElement>document.getElementById('email')).value
+    let pas = (<HTMLInputElement>document.getElementById('password')).value
+    var data={
+      email: email,
+      password: pas,
+    }
+    this.loginService.auth(data).subscribe(res=>{
+      localStorage.setItem('id', res.id);
+      localStorage.setItem('name', res.name);
+      localStorage.setItem('rol', res.rol);
+    },er=>{
+      alert(er)
+    })
   }
 
   addLinkElement() {

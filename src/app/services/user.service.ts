@@ -6,6 +6,7 @@ import { environment } from "../../environments/environments";
 @Injectable({
   providedIn: 'root'
 })
+
 export class UserService {
 
   private apiUrl = environment.backend+'api/user'

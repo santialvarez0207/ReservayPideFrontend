@@ -6,21 +6,25 @@
                     <h6 class="mt-2 text-primary text-center font-20">Registrarse</h6>
                     <p class="text-center text-muted mt-3 mb-3 font-14">aqui puedes crear una cuenta nueva</p>
                     <div class="login-one-inputs mt-5">
-                        <input type="email" placeholder="Email"/>
+                        <input type="text" placeholder="Nombre" id="name"/>
+                        <i></i>
+                    </div>
+                    <div class="login-one-inputs mt-3">
+                        <input type="email" placeholder="Email" id="email"/>
                         <i class="las la-envelope"></i>
                     </div>
                     <div class="login-one-inputs mt-3">
-                        <input type="password" placeholder="Contraseña"/> 
+                        <input type="password" placeholder="Contraseña" id="password1"/> 
                         <i class="las la-lock"></i>
                     </div>
 
                     <div class="login-one-inputs mt-3">
-                        <input type="password" placeholder="Confirmar contraseña"/> 
+                        <input type="password" placeholder="Confirmar contraseña" id="password2"/> 
                         <i class="las la-lock"></i>
                     </div>
 
                     <div class="login-one-inputs mt-4">
-                        <button class="ripple-button ripple-button-primary btn-lg btn-login" type="button">
+                        <button (click)="registrar()" class="ripple-button ripple-button-primary btn-lg btn-login" type="button">
                             <div class="ripple-ripple js-ripple">
                             <span class="ripple-ripple__circle"></span>
                             </div>
