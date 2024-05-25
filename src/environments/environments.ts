@@ -1,5 +1,5 @@
 export const environment = {
     production: false,
-    baseUrl: "http://localhost:4200/",
-    backend:"http://localhost:3000/"
+    baseUrl: "https://reservay-pide-frontend.vercel.app/",
+    backend:"https://reservaypidebackend.onrender.com/"
   };
