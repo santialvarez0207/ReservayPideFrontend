@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --color-principal: #8B0000; /* rojo oscuro */
+    --color-secundario: #F5F5DC; /* beige cálido */
+    --color-acento: #FFD700; /* amarillo brillante */
+  }
+
+  body {
+    background-color: var(--color-secundario);
+  }
+
