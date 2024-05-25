@@ -16,7 +16,7 @@ margin-top: 20px;
                             </div>
                         </div> 
                           
-                        <div class="action-btn">
+                        <div (click)="actualizar(0)" class="action-btn">
                              <a class="btn btn-sm btn-dark" data-toggle="modal" data-target=".bd-example-modal-xl">Agregar al pedido</a>
                         </div>
                     </div>
@@ -33,7 +33,7 @@ margin-top: 20px;
                             </div>
                         </div> 
                         
-                        <div class="action-btn">
+                        <div (click)="actualizar(1)" class="action-btn">
                              <a class="btn btn-sm btn-dark" data-toggle="modal" data-target=".bd-example-modal-xl">Agregar al pedido</a>
                         </div>
                     </div>
@@ -50,7 +50,7 @@ margin-top: 20px;
                             </div>
                         </div> 
                           
-                        <div class="action-btn">
+                        <div (click)="actualizar(2)" class="action-btn">
                              <a class="btn btn-sm btn-dark" data-toggle="modal" data-target=".bd-example-modal-xl">Agregar al pedido</a>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ margin-top: 20px;
                             </div>
                         </div> 
                           
-                        <div class="action-btn">
+                        <div (click)="actualizar(3)" class="action-btn">
                              <a class="btn btn-sm btn-dark" data-toggle="modal" data-target=".bd-example-modal-xl">Agregar al pedido</a>
                         </div>
                     </div>
@@ -84,7 +84,7 @@ margin-top: 20px;
                             </div>
                         </div> 
                           
-                        <div class="action-btn">
+                        <div (click)="actualizar(4)" class="action-btn">
                              <a class="btn btn-sm btn-dark" data-toggle="modal" data-target=".bd-example-modal-xl">Agregar al pedido</a>
                         </div>
                     </div>
@@ -101,7 +101,7 @@ margin-top: 20px;
                             </div>
                         </div> 
                           
-                        <div class="action-btn">
+                        <div (click)="actualizar(5)" class="action-btn">
                              <a class="btn btn-sm btn-dark" data-toggle="modal" data-target=".bd-example-modal-xl">Agregar al pedido</a>
                         </div>
                     </div>
@@ -130,7 +130,7 @@ margin-top: 20px;
                                 <i class="lar la-heart" id="heartIcon"></i>
                             </a>
                             <div class="tab-pane show active" id="product-1-item">
-                                <img src="https://i0.wp.com/chiplote.imk3.net/wp-content/uploads/2021/02/porcion-de-papas.jpeg?fit=1600%2C1066&ssl=1" alt="" class="img-fluid mx-auto d-block rounded">
+                                <img src="{{aimagen}}" alt="" class="img-fluid mx-auto d-block rounded">
                             </div>
 
                         </div>
@@ -138,10 +138,10 @@ margin-top: 20px;
                     </div>
                     <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12">
                         <div class="mt-3 mt-xl-0">
-                            <h4 class="mb-3 text-black strong">Full Sleeve Cotton Shirt with Collar</h4>
+                            <h4 class="mb-3 text-black strong">{{anombre}}</h4>
 
                             <h4 class="mb-3">
-                                <b>$101 USD</b>
+                                <b>{{aprecio}}</b>
                             </h4>
 
                             <h4>
@@ -166,7 +166,7 @@ margin-top: 20px;
                             </div>
                         </div>
                         <div class="text-center w-100">
-                            <button type="button" class="btn btn-primary row">
+                            <button (click)="carrito()" type="button" class="btn btn-primary row">
                                 <i class="las la-plus-circle"></i> Agregarlo a la orden de compra
                             </button>
                         </div>

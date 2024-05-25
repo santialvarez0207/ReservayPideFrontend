@@ -10,6 +10,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { TablesComponent } from './components/tables/tables.component';
 import { OrderComponent } from './components/order/order.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { SoldsComponent } from './components/solds/solds.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LayoutComponent } from './components/layout/layout.component';
     ProductsComponent,
     TablesComponent,
     OrderComponent,
-    LayoutComponent
+    LayoutComponent,
+    SoldsComponent
   ],
   imports: [
     BrowserModule,

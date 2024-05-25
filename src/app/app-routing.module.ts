@@ -7,6 +7,8 @@ import { TablesComponent } from './components/tables/tables.component';
 import { OrderComponent } from './components/order/order.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { RegisterComponent } from './components/register/register.component';
+import { SoldsComponent } from './components/solds/solds.component';
+
 
 
 const routes: Routes = [
@@ -19,7 +21,8 @@ const routes: Routes = [
     {path: '', component: ProductsComponent},
     {path: 'Menu', component: ProductsComponent},
     {path: 'Tables', component: TablesComponent},
-    {path: 'Order', component: OrderComponent}
+    {path: 'Order', component: OrderComponent},
+    {path: 'Solds', component: SoldsComponent}
   ]
   }
 ];

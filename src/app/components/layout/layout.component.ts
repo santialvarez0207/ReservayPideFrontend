@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './layout.component.css'
 })
 export class LayoutComponent {
+  log:boolean=false
+  name:string=''
+  ngOnInit() {
+    if(localStorage.getItem('name')!=undefined){
+      this.name=localStorage.getItem('name')||''
+      this.log=true
+    }
+  }
 
 }

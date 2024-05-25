@@ -30,6 +30,22 @@
 
             </ul>
         </nav>
+        <div *ngIf="log" class="menu">
+            <a href="/Order" aria-expanded="false" class="dropdown-toggle blanco">
+                <div class="">
+                    <i class="las la-user-alt"></i>
+                    <span>{{name}}</span>
+                </div>
+            </a>
+        </div>
+        <div *ngIf="!log" class="menu">
+            <a href="/login" aria-expanded="false" class="dropdown-toggle blanco">
+                <div class="">
+                    <i class="las la-user-alt"></i>
+                    <span>Login</span>
+                </div>
+            </a>
+        </div>
     </div>
     <!--  Sidebar Ends  -->
     <!--  Content Area Starts  -->

@@ -29,7 +29,7 @@ export class RegisterComponent {
     let email = (<HTMLInputElement>document.getElementById('email')).value
     let pas1 = (<HTMLInputElement>document.getElementById('password1')).value
     let pas2 = (<HTMLInputElement>document.getElementById('password2')).value
-    let name = (<HTMLInputElement>document.getElementById('password2')).value
+    let name = (<HTMLInputElement>document.getElementById('name')).value
     if(pas1!=pas2){
       alert('Las contraseñas no coiciden')
     }else{

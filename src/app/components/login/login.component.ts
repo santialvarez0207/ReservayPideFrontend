@@ -3,6 +3,7 @@ import { DOCUMENT } from '@angular/common';
 import { OnInit } from '@angular/core';
 import { LoginService } from '../../services/login.service';
 import { userLogin } from '../../models/user';
+import { environment } from '../../../environments/environments';
 
 @Component({
   selector: 'app-login',
@@ -27,10 +28,12 @@ export class LoginComponent {
       email: email,
       password: pas,
     }
+    console.log(data)
     this.loginService.auth(data).subscribe(res=>{
       localStorage.setItem('id', res.id);
       localStorage.setItem('name', res.name);
       localStorage.setItem('rol', res.rol);
+      window.location.replace(environment.baseUrl+'')
     },er=>{
       alert(er)
     })

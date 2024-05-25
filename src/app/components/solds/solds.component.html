@@ -1,0 +1,44 @@
+<div class="table-container">
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Total</th>
+                <th>Ver pedido</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of data;index as i;">
+                <td>{{product._id}}</td>
+                <td>{{product.nameuser}}</td>
+                <td>{{product.total}}</td>
+                <td (click)="modal(product._id||'')">Ver</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span (click)="close()" class="close">&times;</span>
+        <div class="table-container">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of select.product;index as i;">
+                        <td>{{product.name}}</td>
+                        <td>{{product.count}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
